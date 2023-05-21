@@ -1,8 +1,10 @@
+const header = document.querySelector('.wrapper-header');
 const logo = document.querySelector('.logo');
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
+const projectsWrapper = document.querySelector('.projects-wrapper');
 
 let showMenu = false;
 
@@ -15,6 +17,7 @@ function toggleMenu() {
     menu.classList.add('show');
     menuNav.classList.add('show');
     navItems.forEach(item => item.classList.add('show'));
+    projectsWrapper.style.visibility = 'hidden';
 
     showMenu = true;
   } else {
@@ -25,7 +28,21 @@ function toggleMenu() {
     menu.classList.remove('show');
     menuNav.classList.remove('show');
     navItems.forEach(item => item.classList.remove('show'));
+    setTimeout(function(){
+      projectsWrapper.style.visibility = 'visible';
+    }, 500);
 
     showMenu = false;
   }
 }
+
+let prevScrollpos = window.pageYOffset;
+window.addEventListener('scroll', function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos && currentScrollPos < 100) {
+    header.classList.remove('hidden');
+  } else if (currentScrollPos >= 35) {
+    header.classList.add('hidden');
+  }
+  prevScrollpos = currentScrollPos;
+});
