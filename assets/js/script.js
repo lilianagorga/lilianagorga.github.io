@@ -1,4 +1,4 @@
-const header = document.querySelector('.wrapper-header');
+const header = document.querySelector('.header-wrapper');
 const logo = document.querySelector('.logo');
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
