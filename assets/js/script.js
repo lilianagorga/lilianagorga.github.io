@@ -46,3 +46,21 @@ window.addEventListener('scroll', function() {
   }
   prevScrollpos = currentScrollPos;
 });
+
+
+function sendEmail(event) {
+  event.preventDefault();
+
+  let formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value
+  };
+
+  emailjs.send('service_v2qr8wc','template_6fjhqv9',formData)
+  .then(function(response) {
+    alert('SUCCESS!' + response.status);
+  }, function(error) {
+    alert('FAILED...'+ error.status);
+  });  
+}
