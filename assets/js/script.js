@@ -57,7 +57,10 @@ function sendEmail(event) {
     message: document.getElementById('message').value
   };
 
-  emailjs.send('service_v2qr8wc','template_6fjhqv9',formData)
+  const serviceId = "service_v2qr8wc";
+  const templateId = "template_6fjhqv9";
+
+  emailjs.send('serviceId','templateId',formData)
   .then(function(response) {
     alert('SUCCESS!' + response.status);
   }, function(error) {
