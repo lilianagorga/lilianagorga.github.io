@@ -15,10 +15,9 @@ body {
   background-color: #ececec;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
-}
-
-html, body, #hero {
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -281,6 +280,7 @@ a.underline, button {
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: 3.5rem;
 }
 
 .contact-wrapper {
@@ -289,7 +289,6 @@ a.underline, button {
 }
 
 .contact-headline {
-  /* margin-bottom: 1.5rem; */
   margin: 5rem 0;
   font-family: 'Space Grotesk', sans-serif;
   color: #ececec;
@@ -298,7 +297,6 @@ a.underline, button {
 .contact-control {
   position: relative;
   margin: 1rem 10rem;
-  /* margin-bottom: 1rem; */
   font-weight: 700;
   color: transparent;
 }
@@ -353,7 +351,6 @@ input:invalid, textarea:invalid {
 }
 
 @media (max-width:600px) {
-
   .contact-control {
     margin: 1rem;
   }
@@ -362,9 +359,6 @@ input:invalid, textarea:invalid {
     margin: 8rem 1rem;
   }
 }
-
-
-
 
 /* HERO */
 
@@ -375,7 +369,7 @@ input:invalid, textarea:invalid {
 }
 
 .hero {
-  margin: auto;
+  margin: 0 auto;
 } 
 
 .hero-headline {
@@ -384,45 +378,68 @@ input:invalid, textarea:invalid {
   font-size: 3rem;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
+  text-align: center;
 }
 
 .hero-wrapper {
-  display: grid;
-  gap: 2rem;
-  grid-template-areas: 'hero-picture hero-paragraph';
-  grid-template-columns: 1fr 3fr;
   text-align: center;
   justify-content: center;
   width: 80%;
-  margin: 1rem auto 0;
+  margin: 0.3rem auto 0;
+  margin-bottom: 10vh;
 }
 
-.hero-picture {
-  grid-area: hero-picture;
-  width: 80%;
-  margin: 0;
-  border-radius: 50%;
-}
-
-.hero-image {
-  width: 80%;
-  height: auto;
-  border-radius: 50%;
-}
 
 .hero-paragraph {
-  grid-area: hero-paragraph;
   font-size: 1.5rem;
-  margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
 }
 
+.hero-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem auto 0;
+  width: 60%;
+  gap: 1rem;
+}
+
+.skill {
+  background-color: black;
+  color: white;
+}
+
+.skill-title {
+  border-bottom: 1px solid white;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .hero-skills {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-paragraph {
+    width: 100%;
+  }
+
+  .hero-headline {
+    margin-bottom: 3rem;
+  }
+}
 
 /* FOOTER */
 
 .footer {
   background-color: #000;
-  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }
 
 .footer-wrapper {

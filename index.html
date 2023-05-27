@@ -4,7 +4,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Liliana Gorga">
+  <meta property="og:description" content="Liliana Gorga's Portfolio">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script src="assets/js/emailJs.js"></script>
 	<title>Liliana Gorga</title>
 </head>
 <body>
@@ -43,11 +49,33 @@
 				<h2 class="projects-headline">PROJECTS</h2>
 				<div class="projects-grid">
 					<div class="projects-item">
+						<a href="https://github.com/lilianagorga/portfolio-1" target="_blank">
+							<picture class="projects-picture">
+								<img class="projects-image" src="assets/images/portfolio-1.webp" alt="">
+							</picture>
+							<h3 class="projects-name">Portfolio One</h3>
+							<p class="projects-tags">
+								<span>HTML | CSS | JavaScript</span>
+							</p>
+						</a>					
+					</div>
+					<div class="projects-item">
+						<a href="https://github.com/lilianagorga/portfolio-2" target="_blank">
+							<picture class="projects-picture">
+								<img class="projects-image" src="assets/images/portfolio-2.webp" alt="">
+							</picture>
+							<h3 class="projects-name">Portfolio Two</h3>
+							<p class="projects-tags">
+								<span>HTML | CSS | JavaScript</span>
+							</p>
+						</a>					
+					</div>
+					<div class="projects-item">
 						<a href="https://github.com/lilianagorga/portfolio-3" target="_blank">
 							<picture class="projects-picture">
 								<img class="projects-image" src="assets/images/portfolio-3.webp" alt="">
 							</picture>
-							<h3 class="projects-name">Design Portfolio</h3>
+							<h3 class="projects-name">Portfolio Three</h3>
 							<p class="projects-tags">
 								<span>HTML | CSS | JavaScript</span>
 							</p>
@@ -58,29 +86,7 @@
 							<picture class="projects-picture">
 								<img class="projects-image" src="assets/images/portfolio-4.webp" alt="">
 							</picture>
-							<h3 class="projects-name">Design Portfolio</h3>
-							<p class="projects-tags">
-								<span>HTML | CSS | JavaScript</span>
-							</p>
-						</a>					
-					</div>
-					<div class="projects-item">
-						<a href="https://github.com/lilianagorga/portfolio-5" target="_blank">
-							<picture class="projects-picture">
-								<img class="projects-image" src="assets/images/portfolio-5.webp" alt="">
-							</picture>
-							<h3 class="projects-name">Design Portfolio</h3>
-							<p class="projects-tags">
-								<span>HTML | CSS | JavaScript</span>
-							</p>
-						</a>					
-					</div>
-					<div class="projects-item">
-						<a href="https://github.com/lilianagorga/portfolio-6" target="_blank">
-							<picture class="projects-picture">
-								<img class="projects-image" src="assets/images/portfolio-6.webp" alt="">
-							</picture>
-							<h3 class="projects-name">Design Portfolio</h3>
+							<h3 class="projects-name">Portfolio Four</h3>
 							<p class="projects-tags">
 								<span>HTML | CSS | JavaScript</span>
 							</p>
@@ -94,7 +100,7 @@
 			<div class="contact-wrapper">
 				<h2 class="contact-headline">CONTACT</h2>
 				<form class="contact-form" id="contact-form">
-				<!-- <form class="contact-form" id="contact-form" action="https://emailjs.com"> -->
+					<input type="hidden" name="contact_number">
 					<div class="contact-control">
 						<label for="name"></label>
 						<input type="text" id="name" name="name" placeholder="Name" required>
@@ -109,7 +115,6 @@
 					</div>
 					<div class="contact-control align-right">
 						<button type="submit">Send Message</button>
-						<!-- <a href=""><button type="submit" onclick="sendEmail(event)">Send Message</button></a> -->
 					</div>
 				</form>
 			</div>
@@ -155,12 +160,7 @@
 		</div>
 	</footer>
 
-	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-	<script type="text/javascript">
-  (function(){
-    emailjs.init("dp_lCg3iJBgDS48Cj");
-  })();
-	</script> -->
+	
 	<script src="assets/js/script.js"></script>
 </body>
 </html>

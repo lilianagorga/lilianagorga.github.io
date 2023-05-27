@@ -91,24 +91,3 @@ function disableScrolling(){
 function enableScrolling(){
   window.onscroll=function(){};
 }
-
-
-// function sendEmail(event) {
-//   event.preventDefault();
-
-//   let formData = {
-//     name: document.getElementById('name').value,
-//     email: document.getElementById('email').value,
-//     message: document.getElementById('message').value
-//   };
-
-//   const serviceId = "service_v2qr8wc";
-//   const templateId = "template_6fjhqv9";
-
-//   emailjs.send('serviceId','templateId',formData)
-//   .then(function(response) {
-//     alert('SUCCESS!' + response.status);
-//   }, function(error) {
-//     alert('FAILED...'+ error.status);
-//   });  
-// }
