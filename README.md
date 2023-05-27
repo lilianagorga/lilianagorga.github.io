@@ -6,3 +6,7 @@
 * Vanilla JavaScript
 * EmailJS - external library to handle contact form
 * Open Graph tags
+
+## Live Demo 
+* The Portfolio is deployed and can be accessed at the following URL =
+  * https://lilianagorga.github.io/portfolio/
