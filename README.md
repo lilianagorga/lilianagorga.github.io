@@ -8,5 +8,4 @@
 * Open Graph tags
 
 ## Live Demo 
-* The Portfolio is deployed and can be accessed at the following URL =
-  * https://lilianagorga.github.io/
+The Portfolio is deployed on GitHub Pages and can be accessed at: https://lilianagorga.github.io/
